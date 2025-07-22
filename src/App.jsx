@@ -11,6 +11,12 @@ import XSS from './pages/learn/XSS'
 import LearnPage from './pages/LearnPage'
 import HacksPage from './pages/HacksPage'
 import NavBar from './components/NavBar'
+import Firewall from './pages/learn/Firewall'
+import AntiVirus from './pages/learn/AntiVirus'
+import Ids from './pages/learn/Ids'
+import PenetrationTester from './pages/learn/PenetrationTester'
+import MFA from './pages/learn/MFA'
+import VictimPage from './pages/VictimPage'
 
 export default function App() {
   return (
@@ -31,6 +37,12 @@ export default function App() {
         <Route path="/learn/social-engineering" element={<SocialEngineering />} />
         <Route path="/learn/sql-injection" element={<SQLInjection />} />
         <Route path="/learn/xss" element={<XSS />} />
+        <Route path="/learn/firewall" element={<Firewall />} />
+        <Route path="/learn/anti-virus" element={<AntiVirus />} />
+        <Route path="/learn/ids" element={<Ids />} />
+        <Route path="learn/penetration-tester" element={<PenetrationTester />} />
+        <Route path="/learn/mfa" element={<MFA />} />
+        <Route path="/learn/become-a-victim" element={<VictimPage />} />
 
         {/* bonus pages */}
         <Route path="/learn-page" element={<LearnPage />} />

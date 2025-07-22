@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ProfileCard({
   cyberSecTech = "Jane Doe",
@@ -38,7 +39,7 @@ export default function ProfileCard({
           </span>
         </div>
 
-        {/* Red sliding panel */}
+        {/* Sliding panel */}
         <div
           className={`absolute inset-0 z-20 p-8 text-white bg-glitch-purple transform transition-transform duration-500 ${
             hovered ? "translate-x-0" : "-translate-x-full"
@@ -53,6 +54,14 @@ export default function ProfileCard({
             <span>{role}</span>
             <span>{location}</span>
           </div>
+          <div className="text-right">
+            <Link to={`/learn/${cyberSecTech.toLowerCase().split(' (')[0].replace(/\s+/g, '-')}`}>
+              <button className="mt-4 px-4 py-2 bg-glitch-pink text-white rounded hover:bg-neon-cyan transition">
+                Learn More
+              </button>
+            </Link>
+          </div>
+
         </div>
       </div>
     </div>

@@ -72,18 +72,14 @@ export default function WhatIsCybersecurity() {
       <TextDisplayV1
         title="Cybersecurity as an analogy"
         textBlocks={[
-          "Think of cybersecurity as the bouncer at a club. Doesn’t matter how much aura you radiate. If you look sus, you’re not getting into VIP.",
-          "And in the digital world? VIP = your private data, and hackers are just trying to snatch it off the snack table.",
-          "Just like there are different types of bodyguards in real life, cybersecurity involves a mix of strategies and tools to protect computers, networks, and sensitive data from digital attacks.",
-          "But here’s the catch: just because there’s a bouncer doesn’t mean you’re invincible. If you wander outside the club (like oversharing online), you’re exposed.",
-          "Even the best security setup can’t save you if you hand out your personal info on a silver platter. That’s how you get doxxed.",
+          "Think of cybersecurity as the bouncer at a club. Doesn’t matter how much aura you radiate. If you look sus, you’re not getting into VIP. And in the digital world? VIP = your private data, and hackers are just trying to snatch it off the snack table.",
+          "Just like there are different types of bodyguards in real life, cybersecurity involves a mix of strategies and tools to protect computers, networks, and sensitive data from digital attacks. But here’s the catch: just because there’s a bouncer doesn’t mean you’re invincible. If you wander outside the club (like oversharing online), you’re exposed. Even the best security setup can’t save you if you're giving your personal information like free candy. That’s how you get doxxed.",
           "Essentially, good security always starts with the user first. If you’re not careful, no amount of tech can save you. Let's explore some of the different types of security features you may encounter in the cybersecurity world.",
         ]}
-        imageSrc="/cybersecurity.png"
-        alt="Glitched padlock"
       />
 
-      <div className="flex items-center justify-center gap-4 mt-10">
+      <h1 className="text-4xl font-bold text-neon-cyan">THE BODYGUARDS</h1>
+      <div className="flex items-center justify-center gap-4 mt-4">
        <button
           onClick={prevCard}
           className="text-4xl text-glitch-pink hover:text-neon-cyan transition duration-300"
@@ -100,9 +96,37 @@ export default function WhatIsCybersecurity() {
           &gt;
         </button>
       </div>
-        <p className="mt-4 text-glitch-pink text-sm">
+        <p className="mt-4 text-glitch-pink text-sm mb-8">
           {currentIndex + 1} / {profiles.length}
         </p>
+        <TextDisplayV1
+          title="Types of Cybersecurity"
+          textBlocks={[
+            "Now that we’ve met the bodyguards, let’s break down what areas of the club they protect. Cybersecurity isn’t one-size-fits-all, it comes in different flavors for different threats. Whether it’s locking down the dancefloor, checking IDs at the door, or guarding the VIP lounge, each area needs a different kind of protection.",
+            "<b>1. Network Security</b>",
+            "As the name suggests, this is all about securing computer networks from unwanted access and threats.",
+            "<b>2. Application Security</b>",
+            "This is moreso related to software applications and ensuring there are no exploitable vulnerabilities in the software.",
+            "<b>3. Information Security</b>",
+            "Otherwise known as data security, this is about protecting sensitive data from unauthorized access, and ensuring its integrity.",
+            "<b>4. Endpoint Security</b>",
+            "An endpoint is any device that has access to a network. Endpoint security is about protecting these devices from threats, such as malware and unauthorized access.",
+            "<b>5. Cloud Security</b>",
+            "Primarily focused on defending cloud based storage and applications from threats. This is becoming increasingly important as more businesses prefer this option to store their data.",
+            "<b>6. Operational Security</b>",
+            "This is all about human error and implementations to practice to protect sensitive data from being exposed to the internet. This includes things like password management, data encryption, and access controls.",
+            "<b>7. Internet of Things (IoT) Security</b>",
+            "Anything that is connected to the internet is considered an IoT device and this is about ensuring that these devices are secure from hackers and do not become entry points for attacks."
+          ]}
+        />
+        <TextDisplayV1
+          title="Why Cybersecurity matters"
+          textBlocks={[
+            "Imagine if the world didn't have guards around. No protection. No security. Just pure chaos. That's what the digital world would be like without cybersecurity. It's not just about ensuring people don't do illegal stuff online, but its also about protecting your own personal information because imagine if your sweet bank account just plummets to debt. yeah... not fun.",
+            "Especially in this day and age where everything is being digitized and attacks are becoming more sophisticated, cybersecurity is the silent bodyguard you never knew you needed",
+            "So next time you are online, just remember the bouncer analogy - if you’re the one letting shady people in (leaking personal info), no amount of bodyguards can save the party."
+          ]}
+        />
     </div>
   );
 }
