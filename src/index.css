@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #00FFF7;    
+  --color-glitch-purple: #6C1AFF;   
+  --color-glitch-pink: #FF4BF1;
+  --color-terminal-bg: #011627;   
+}

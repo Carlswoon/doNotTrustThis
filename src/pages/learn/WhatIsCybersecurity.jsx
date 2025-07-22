@@ -1,0 +1,108 @@
+import { useState } from "react";
+import ProfileCard from "../../components/ProfileCard.jsx";
+import TextDisplayV1 from "../../components/TextDisplayV1.jsx";
+
+const profiles = [
+  {
+    cyberSecTech: "Firewall",
+    guardName: "Bouncer (a.k.a Firewall)",
+    imgSrc: "/bouncer.png",
+    group: "Cyber Ops",
+    joined: "Joined July 1980",
+    role: "CTF Lead",
+    location: "Sydney, Australia",
+    bio: "Only lets legit traffic into the network. You are too drunk? You act rowdy? You're gonna disrupt the current network? Nah fam can’t let you in."
+  },
+  {
+    cyberSecTech: "Anti-Virus",
+    guardName: "The Secret Service Agent (a.k.a Anti-Virus)",
+    imgSrc: "/anti-virus.png",
+    group: "Norton Security",
+    joined: "Joined May 1982",
+    role: "Digital watchdog",
+    location: "Arizona, USA",
+    bio: "Protects their host directly. As soon as a threat is detected, they intervene immediately and grant protection."
+  },
+  {
+    cyberSecTech: "IDS (Intrusion Detection System)",
+    guardName: "The Surveillance Guy in the Van (a.k.a Intrusion Detection System)",
+    imgSrc: "/ids.png",
+    group: "Radar Surveillance",
+    joined: "Joined May 2021",
+    role: "Scout Lookout",
+    location: "Shanghai, China",
+    bio: "Catches unusual traffic and alerts you when someone's acting sus. Eyes glued to the screen with alert scripts ready to go."
+  },
+  {
+    cyberSecTech: "Penetration Tester",
+    guardName: "Undercover Agent (a.k.a Penetration Tester)",
+    imgSrc: "/penetration-tester.png",
+    group: "Threat Intel",
+    joined: "Joined June 2024",
+    role: "Packet Sniffer",
+    location: "Canberra, Australia",
+    bio: "Pretends to be an attacker to test your defenses. They take the role of a hacker to find your most vulnerable points. \n WARNING: This system is going to self destruct in 5 seconds... 4... 3... 2... 1... Just kidding..?"
+  },
+  {
+    cyberSecTech: "MFA (Multi-Factor Authentication)",
+    guardName: "The OG Bodyguard (a.k.a Multi-Factor Authentication)",
+    imgSrc: "/OGbodyguard.png",
+    group: "OG Corporation",
+    joined: "Joined since the dawn of time",
+    role: "The Original",
+    location: "Earth, The Solar System",
+    bio: "No one is getting in without showing their ID, scanning their fingerprint, answering the name of their first pet, confirming the verification on their phone, and then doing a backflip. If you can’t do all that, you’re not HIM. fullstop. \nERROR: DENIED ACCESS!"
+    },
+];
+
+export default function WhatIsCybersecurity() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevCard = () => {
+    setCurrentIndex((prev) => (prev === 0 ? profiles.length - 1 : prev - 1));
+  };
+
+  const nextCard = () => {
+    setCurrentIndex((prev) => (prev === profiles.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div className="min-h-screen bg-terminal-bg text-white px-6 py-10 flex flex-col items-center">
+      <h1 className="text-6xl font-bold text-neon-cyan mb-4">What is Cybersecurity?</h1>
+      <TextDisplayV1
+        title="Cybersecurity as an analogy"
+        textBlocks={[
+          "Think of cybersecurity as the bouncer at a club. Doesn’t matter how much aura you radiate. If you look sus, you’re not getting into VIP.",
+          "And in the digital world? VIP = your private data, and hackers are just trying to snatch it off the snack table.",
+          "Just like there are different types of bodyguards in real life, cybersecurity involves a mix of strategies and tools to protect computers, networks, and sensitive data from digital attacks.",
+          "But here’s the catch: just because there’s a bouncer doesn’t mean you’re invincible. If you wander outside the club (like oversharing online), you’re exposed.",
+          "Even the best security setup can’t save you if you hand out your personal info on a silver platter. That’s how you get doxxed.",
+          "Essentially, good security always starts with the user first. If you’re not careful, no amount of tech can save you. Let's explore some of the different types of security features you may encounter in the cybersecurity world.",
+        ]}
+        imageSrc="/cybersecurity.png"
+        alt="Glitched padlock"
+      />
+
+      <div className="flex items-center justify-center gap-4 mt-10">
+       <button
+          onClick={prevCard}
+          className="text-4xl text-glitch-pink hover:text-neon-cyan transition duration-300"
+        >
+          &lt;
+        </button>
+
+        <ProfileCard {...profiles[currentIndex]} />
+
+        <button
+          onClick={nextCard}
+          className="text-4xl text-glitch-pink hover:text-neon-cyan transition duration-300"
+        >
+          &gt;
+        </button>
+      </div>
+        <p className="mt-4 text-glitch-pink text-sm">
+          {currentIndex + 1} / {profiles.length}
+        </p>
+    </div>
+  );
+}
