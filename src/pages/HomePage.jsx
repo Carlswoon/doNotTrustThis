@@ -51,7 +51,7 @@ export default function HomePage() {
               This site is your safe playground for breaking things. Exploit real bugs, bypass logic, and mess with the site. No cops will be knocking at your door. maybe...
             </p>
           </div>
-          <Link to="/learn" className="mt-6 inline-block w-full text-center px-6 py-3 bg-neon-cyan text-black font-bold rounded-lg hover:bg-glitch-pink transition duration-300">
+          <Link to="/learn" className="mt-6 inline-block w-full text-center px-6 py-3 text-black bg-neon-cyan border border-transparent rounded-lg shadow shadow-neon-cyan transition-all duration-200 hover:border-white hover:shadow-[0_0_20px_var(--tw-shadow-color)] hover:scale-105">
             Learn
           </Link>
         </div>

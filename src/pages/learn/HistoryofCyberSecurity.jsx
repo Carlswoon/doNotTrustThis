@@ -4,10 +4,10 @@ const timelineData = [
   // link: { text: "Learn more", href: "#" },
   {
     date: "1940-1960",
-    title: "01101000 01101001",
+    title: "01001000 01100101 01101100 01101100 01101111 00100000 01110111 01101111 01110010 01101100 01100100",
     description:
       "The era where computing began computing.\n Between 1943 and 1945 in the University of Pennsylvania, the Electronic Numerical Integrator and Computer (ENIAC) came to life which was the first ever fully electronic, general-purpose computer. It could be programmed to solve problems like weather predictions and ballistics... but there was a catch: \n It consumed ~150 kilowatts of power! This is so much energy that it can keep 100–150 modern homes lit! \n Around the same time, the Colossus was developed in Britain which was the world’s first programmable digital computer. Unlike ENIAC, Colossus was built with one goal: to crack Nazi Germany’s Lorenz cipher. It played a vital role in helping the Allies shorten World War II. \n And as the decade closed, a huge milestone dropped: ARPANET was born in 1969. Known as the prototype of the modern internet, it was the first operational packet-switching network. The first message ever sent was just “LO”. They tried typing “LOGIN”, but ARPANET decided to crashout. Very unfortunate. :(",
-    secretMessage: "Binary for hi",
+    secretMessage: "Binary?",
     image: "/timeline1.png",
   },
   {
