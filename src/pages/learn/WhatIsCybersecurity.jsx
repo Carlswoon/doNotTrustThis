@@ -68,7 +68,14 @@ export default function WhatIsCybersecurity() {
 
   return (
     <div className="min-h-screen bg-terminal-bg text-white px-6 py-10 flex flex-col items-center">
-      <h1 className="text-6xl font-bold text-neon-cyan mb-4">What is Cybersecurity?</h1>
+       <div className="w-full flex flex-col items-center justify-center py-12 gap-6">
+        <img
+          src="/whatiscybersec.png"
+          alt="Cyber guy illustration"
+          className="w-64 md:w-80 lg:w-96 object-contain drop-shadow-[0_0_25px_#00FFF7]"
+        />
+        <h1 className="text-6xl font-bold text-neon-cyan mb-4">What is Cybersecurity?</h1>
+      </div>
       <TextDisplayV1
         title="Cybersecurity as an analogy"
         textBlocks={[

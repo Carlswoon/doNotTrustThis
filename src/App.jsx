@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import LearnIndex from './pages/learn/Index'
 import Doxxing from './pages/learn/Doxxing'
-import HistoryOfCyberSecurity from './pages/learn/HistoryOfCyberSecurity'
+import HistoryOfCyberSecurity from './pages/learn/HistoryofCyberSecurity'
 import InsideTheMindOfAHacker from './pages/learn/InsideTheMindOfAHacker'
 import SocialEngineering from './pages/learn/SocialEngineering'
 import SQLInjection from './pages/learn/SQLInjection'
@@ -17,11 +17,13 @@ import Ids from './pages/learn/Ids'
 import PenetrationTester from './pages/learn/PenetrationTester'
 import MFA from './pages/learn/MFA'
 import VictimPage from './pages/VictimPage'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <Routes>
         {/* homepage */}
         <Route path="/" element={<HomePage />} />
