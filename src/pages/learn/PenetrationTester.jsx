@@ -1,4 +1,3 @@
-import GoBackButton from "../../components/GoBackButton"
 
 export default function PenetrationTester() {
   return (
@@ -7,7 +6,6 @@ export default function PenetrationTester() {
       <p className="text-lg text-gray-300 mb-10">
         Penetration testing otherwise known as red teaming is a simulated cyber attack against your computer system to check for exploitable vulnerabilities. In a penetration test, security experts attempt to exploit the vulnerabilities in your system, just like a hacker would. The goal is to identify any weaknesses in your security before they can be exploited by malicious actors.
       </p>
-      <GoBackButton />
     </div>
   )
 }
