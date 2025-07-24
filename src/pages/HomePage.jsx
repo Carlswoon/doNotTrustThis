@@ -19,8 +19,7 @@ export default function HomePage() {
           About this Website
         </h2>
         <p className="max-w-3xl mx-auto text-base sm:text-lg text-neon-cyan">
-          This website is a safely hackable Capture the Flag (CTF) playground where you can learn
-          about web vulnerabilities, exploit real challenges, and test your attacker mindset.
+          Welcome to a website that lies to you on purpose. Maybe? Who knows? This isn't your typical cybersecurity guide. It's an interactive hackable Capture The Flag (CTF) that will help you think like an attacker.
         </p>
       </section>
 
@@ -29,26 +28,26 @@ export default function HomePage() {
         <div className="space-y-4 text-white">
           <div className="p-4 bg-[#1a1a2e] rounded-xl border border-glitch-purple">
             <h3 className="text-lg sm:text-xl font-bold text-neon-cyan">
-              Learn the Cybersecurity Mindset
+              Think Like an Attacker
             </h3>
             <p className="text-sm mt-1 text-gray-300">
-              Understand how attackers think. Learn the techniques, tools, and common mistakes that make websites vulnerable. You know what they say, the best defense has the best offense.
+              From social engineering to web exploits, discover how hackers manipulate trust, break logic, and exploit vulnerabilities. Develop an attacker mindset because understanding threats is the first step to defending against them.
             </p>
           </div>
           <div className="p-4 bg-[#1a1a2e] rounded-xl border border-glitch-purple">
             <h3 className="text-lg sm:text-xl font-bold text-neon-cyan">
-              Explore Real Hacking Techniques
+              Break Things. On Purpose.
             </h3>
             <p className="text-sm mt-1 text-gray-300">
-              Learn the theory side of hacking. Understand common web exploits like XSS, SQLi, CSRF, and more!
+              Whether it’s XSS or bypassing hidden logic, this site lets you get hands-on experience with real (but safe) vulnerabilities. Test your skills — no permission slips required. Just don't doxx me please.
             </p>
           </div>
           <div className="p-4 bg-[#1a1a2e] rounded-xl border border-glitch-purple">
             <h3 className="text-lg sm:text-xl font-bold text-neon-cyan">
-              Gain Practical Experience
+              Challenge What You See
             </h3>
             <p className="text-sm mt-1 text-gray-300">
-              This site is your safe playground for breaking things. Exploit real bugs, bypass logic, and mess with the site. No cops will be knocking at your door. maybe...
+             Some pages lie. Some flags are red herrings. Can you tell what’s real? Not everything is as it seems, and sometimes the only way forward is to <span className="text-glitch-pink font-semibold">break the rules.</span>
             </p>
           </div>
           <Link to="/learn" className="mt-6 inline-block w-full text-center px-6 py-3 text-black bg-neon-cyan border border-transparent rounded-lg shadow shadow-neon-cyan transition-all duration-200 hover:border-white hover:shadow-[0_0_20px_var(--tw-shadow-color)] hover:scale-105">

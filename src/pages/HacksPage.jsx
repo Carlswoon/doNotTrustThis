@@ -116,7 +116,7 @@ export default function HacksPage() {
             href="/the-truth"
             className="mt-2 inline-block px-6 py-2 bg-glitch-pink text-black font-bold rounded hover:scale-105 transition"
           >
-            Go to the truth 🚪
+            The truth awaits...
           </a>
         </div>
       )}

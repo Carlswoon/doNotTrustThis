@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function CommentSection() {
   const [comments, setComments] = useState([]);
@@ -17,8 +16,14 @@ export default function CommentSection() {
   setCommentCount(newCount);
 
   // Don't annoy them if they've already won
+  const xssPayload = `<img src="x" onerror="sessionStorage.setItem('xss','true'); window.location='/hidden-flag'" />`;
 
-  if (sessionStorage.getItem("xss") === "true") return;
+  if (input.trim() === xssPayload) {
+    setComments((prev) => [...prev, input]);
+    setInput("");
+    setCommentCount((prev) => prev + 1);
+    return; // Don't trigger alerts
+  }
   // Hints -> fibonacci sequence
   if (newCount === 1) {
     alert("Nice comment you've got there. . . WAIT. ARE YOU TRYING TO BREAK THIS SITE?! I'd like to see you try 😈");

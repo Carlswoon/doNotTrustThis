@@ -19,6 +19,7 @@ import AccessDenied from './pages/AcessDenied'
 import GeoChallenge from './pages/hacks/geo'
 import InspectCTF from './pages/hacks/inspect'
 import SocialChallenge from './pages/hacks/Social'
+import Truth from './pages/TheTruth'
 
 export default function App() {
   return (
@@ -51,7 +52,7 @@ export default function App() {
         <Route path="hacks/geo" element={<GeoChallenge />} />
         <Route path="hacks/inspect" element={<InspectCTF />} />
         <Route path="hacks/social" element={<SocialChallenge />} />
-
+        <Route path="the-truth" element={<Truth />} />
         <Route
           path="/hidden-flag"
           element={<HiddenFlag />}
