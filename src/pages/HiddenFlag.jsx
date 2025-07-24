@@ -9,7 +9,7 @@ export default function HiddenFlag() {
     if (allowed !== "true") {
       navigate("/404");
     }
-  }, []);
+  });
 
   return (
     <div className="min-h-screen bg-terminal-bg flex flex-col items-center justify-center px-4 py-12 space-y-8">
