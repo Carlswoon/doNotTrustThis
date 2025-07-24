@@ -1,4 +1,4 @@
-import GoBackButton from "../../components/GoBackButton"
+import GoBackButton from "../components/GoBackButton"
 
 export default function Firewall() {
   return (
