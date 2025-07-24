@@ -49,14 +49,11 @@ export default function App() {
         <Route path="/hacks" element={<HacksPage />} />
 
         {/*Hack challenges */}
-        <Route path="hacks/geo" element={<GeoChallenge />} />
-        <Route path="hacks/inspect" element={<InspectCTF />} />
-        <Route path="hacks/social" element={<SocialChallenge />} />
-        <Route path="the-truth" element={<Truth />} />
-        <Route
-          path="/hidden-flag"
-          element={<HiddenFlag />}
-        />
+        <Route path="/hacks/geo" element={<GeoChallenge />} />
+        <Route path="/hacks/inspect" element={<InspectCTF />} />
+        <Route path="/hacks/social" element={<SocialChallenge />} />
+        <Route path="/the-truth" element={<Truth />} />
+        <Route path="/hidden-flag" element={<HiddenFlag />}/>
         <Route path="/404" element={<AccessDenied />} />
       </Routes>
     </>
