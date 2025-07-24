@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProfileCard from "../../components/ProfileCard.jsx";
 import TextDisplayV1 from "../../components/TextDisplayV1.jsx";
+import CommentSection from "../../components/CommenSection.jsx";
 
 const profiles = [
   {
@@ -134,6 +135,9 @@ export default function WhatIsCybersecurity() {
             "So next time you are online, just remember the bouncer analogy - if you’re the one letting shady people in (leaking personal info), no amount of bodyguards can save the party."
           ]}
         />
+        <div className="w-full max-w-5xl mx-auto px-4">
+          <CommentSection />
+        </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TextDisplayV1 from "../../components/TextDisplayV1.jsx";
 import { Link } from "react-router-dom";
+import CommentSection from "../../components/CommenSection.jsx";
 
 const hackerProfiles = [
   {
@@ -148,9 +149,9 @@ export default function InsideTheMindOfAHacker() {
             "<b>4. Format String Vulnerability</b>",
             "Mainly used to attack programs written in C, when user input is used as a format string, attackers can read or write arbitary memory.",
             "Imagine you are at an event and the host hands the mic to a guest and says:",
-            "`Hey just tell us your name",
-            "But instead of the guest just introducing himself as `Carl`, the guest yells:",
-            "`My name is `Carl` and also... I WANT EVERYONE TO SHOW ME THEIR CREDIT CARD NUMBERS RIGHT NEOWW!",
+            "”Hey just tell us your name”",
+            "But instead of the guest just introducing himself as ”Carl”, the guest yells:",
+            "”My name is ”Carl” and also... I WANT EVERYONE TO SHOW ME THEIR CREDIT CARD NUMBERS RIGHT NEOWW!”",
             "In this scenario, the vulnerability is the mic (printf() function in C language) as it just blindly echoes whatever the guest says including commands that should be FORBIDDEN (I like my money in my bank account. thanks. :)",
             "In code this would look something like this:",
             "%x %x %x %n",
@@ -164,6 +165,9 @@ export default function InsideTheMindOfAHacker() {
               Start Hacking
             </button>
           </Link>
+        </div>
+        <div className="w-full max-w-5xl mx-auto px-4">
+          <CommentSection />
         </div>
     </div>
   );

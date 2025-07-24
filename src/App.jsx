@@ -16,8 +16,10 @@ import AntiVirus from './pages/learn/AntiVirus'
 import Ids from './pages/learn/Ids'
 import PenetrationTester from './pages/learn/PenetrationTester'
 import MFA from './pages/learn/MFA'
-import VictimPage from './pages/VictimPage'
+import VictimPage from './pages/learn/VictimPage'
 import ScrollToTop from './components/ScrollToTop'
+import HiddenFlag from  './pages/HiddenFlag'
+import AccessDenied from './pages/AcessDenied'
 
 export default function App() {
   return (
@@ -49,6 +51,12 @@ export default function App() {
         {/* bonus pages */}
         <Route path="/learn-page" element={<LearnPage />} />
         <Route path="/hacks" element={<HacksPage />} />
+
+        <Route
+          path="/hidden-flag"
+          element={<HiddenFlag />}
+        />
+        <Route path="/404" element={<AccessDenied />} />
       </Routes>
     </>
   )
