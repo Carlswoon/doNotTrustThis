@@ -20,6 +20,9 @@ import VictimPage from './pages/learn/VictimPage'
 import ScrollToTop from './components/ScrollToTop'
 import HiddenFlag from  './pages/HiddenFlag'
 import AccessDenied from './pages/AcessDenied'
+import GeoChallenge from './pages/hacks/geo'
+import InspectCTF from './pages/hacks/inspect'
+import SocialChallenge from './pages/hacks/Social'
 
 export default function App() {
   return (
@@ -51,6 +54,11 @@ export default function App() {
         {/* bonus pages */}
         <Route path="/learn-page" element={<LearnPage />} />
         <Route path="/hacks" element={<HacksPage />} />
+
+        {/*Hack challenges */}
+        <Route path="hacks/geo" element={<GeoChallenge />} />
+        <Route path="hacks/inspect" element={<InspectCTF />} />
+        <Route path="hacks/social" element={<SocialChallenge />} />
 
         <Route
           path="/hidden-flag"

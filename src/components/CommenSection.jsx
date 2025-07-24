@@ -4,19 +4,49 @@ import { useNavigate } from "react-router-dom";
 export default function CommentSection() {
   const [comments, setComments] = useState([]);
   const [input, setInput] = useState("");
-  const navigate = useNavigate();
+  const [commentCount, setCommentCount] = useState(0);
 
+  // <img src="x" onerror="sessionStorage.setItem('xss','true'); window.location='/hidden-flag'" />
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // XSS trigger: if the comment includes script redirect, navigate
-    if (input.includes("navigateToFlag")) {
-      navigate("/hidden-flag");
+  setComments((prev) => [...prev, input]);
+  setInput("");
+
+  const newCount = commentCount + 1;
+  setCommentCount(newCount);
+
+  // Don't annoy them if they've already won
+
+  if (sessionStorage.getItem("xss") === "true") return;
+  // Hints -> fibonacci sequence
+  if (newCount === 1) {
+    alert("Nice comment you've got there. . . WAIT. ARE YOU TRYING TO BREAK THIS SITE?! I'd like to see you try 😈");
+  }
+  if (newCount === 2) {
+    alert("Still nothing? Huh. You're funny");
+  }
+  if (newCount === 3) {
+    alert("mhm you are commenting quite a bit. Tryna do a soliloquy?");
+  }
+  if (newCount === 5) {
+    alert("MUAHAHA the hidden route /hidden-flag will never be exposed - oh oops...");
+  }
+  if (newCount === 8) {
+    alert("Ok now I'm starting to feel sorry for you... While you are here, ever heard of <img onerror>? Asking for a friend. >8P");
+  }
+  if (newCount === 13) {
+    alert("<img src=“x“ onerror=“sessionStorage.setItem('xss','true'); window.location='/hidden-flag'“ />");
+  }
+  if (newCount > 13) {
+    if (newCount === 21) {
+      alert("okay buddy. chill. ur not aura farming by spamming alerts. just take the payload and leave me alone PLEASE TWT");
+    } else {
+      alert("THAT WAS THE ANSWER EARLIER DUMMY! HERE IT IS IF YOU FORGOT.<img src=“x“ onerror=“sessionStorage.setItem('xss','true'); window.location='/hidden-flag'“/>");
     }
+  }
+};
 
-    setComments((prev) => [...prev, input]);
-    setInput("");
-  };
 
   return (
     <div className="mt-10 space-y-4 text-gray-200">
