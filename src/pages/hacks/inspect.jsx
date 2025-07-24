@@ -7,7 +7,7 @@ export default function InspectCTF() {
       </p>
 
       {/* 🕵️ Hidden HTML comment with flag */}
-      <div dangerouslySetInnerHTML={{ __html: `<!-- flag{curiosity_rewards_you} -->` }} />
+      <div dangerouslySetInnerHTML={{ __html: `<!-- flag{curiosity_rewards_you} 👈 now go copy paste this into the hacks page-->` }} />
 
       {/* Red herrings (optional) */}
       <div className="mt-12 text-sm text-gray-500">

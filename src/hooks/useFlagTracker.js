@@ -16,11 +16,18 @@ export default function useFlagTracker() {
     }
   };
 
+  const resetFlags = () => {
+    localStorage.removeItem("foundFlags");
+    setFoundFlags([]);
+  };
+
   return {
     foundFlags,
     total: allFlags.length,
     count: foundFlags.length,
     submitFlag,
+    resetFlags,
     hasFlag: (flagId) => foundFlags.includes(flagId),
   };
 }
+

@@ -11,7 +11,7 @@ const flagMap = {
 };
 
 export default function HacksPage() {
-  const { foundFlags, submitFlag, hasFlag, count, total } = useFlagTracker();
+  const { foundFlags, submitFlag, hasFlag, count, total, resetFlags } = useFlagTracker();
   const [input, setInput] = useState('');
   const [feedback, setFeedback] = useState('');
 
@@ -86,7 +86,7 @@ export default function HacksPage() {
           />
           <button
             onClick={handleSubmit}
-            className="bg-neon-cyan text-black font-bold px-4 py-2 rounded hover:scale-105 transition"
+            className="bg-neon-cyan text-black font-bold px-4 py-2 rounded hover:scale-105 transition shadow shadow-neon-cyan transition-all duration-200 hover:border-white hover:shadow-[0_0_20px_var(--tw-shadow-color)] hover:scale-105"
           >
             Submit
           </button>
@@ -94,6 +94,20 @@ export default function HacksPage() {
         {feedback && <p className="text-glitch-pink text-sm">{feedback}</p>}
       </div>
       <p className="text-center text-neon-cyan text-2xl">Flags Found: {count} / {total}</p>
+        
+      <div className="text-center mt-6">
+        <button
+          onClick={() => {
+            if (window.confirm("oh... r u sure u wanna reset your progress? MUAHAHAAA")) {
+              resetFlags();
+            }
+          }}
+          className="mt-6 inline-block text-center px-6 py-3 text-black bg-neon-cyan border border-transparent rounded-lg shadow shadow-neon-cyan transition-all duration-200 hover:border-white hover:shadow-[0_0_20px_var(--tw-shadow-color)] hover:scale-105"
+        >
+          Reset All Flags
+        </button>
+      </div>
+
 
       {count === total && (
         <div className="text-center mt-10">
