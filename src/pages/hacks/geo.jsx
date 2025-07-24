@@ -7,7 +7,7 @@ export default function GeoChallenge() {
 
   const handleSubmit = () => {
     const normalized = guess.trim().toLowerCase();
-    if (["iloilo", "iloilo city", "garin farm"].includes(normalized)) {
+    if (["iloilo", "iloilo city", "garin farm", "iloilo garin farm", "garin farm iloilo"].includes(normalized)) {
       setFeedback("✅ Correct! Here's your flag:");
       setSubmitted(true);
     } else {
