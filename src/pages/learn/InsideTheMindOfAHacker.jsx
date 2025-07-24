@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TextDisplayV1 from "../../components/TextDisplayV1.jsx";
+import { Link } from "react-router-dom";
 
 const hackerProfiles = [
   {
@@ -66,7 +67,7 @@ export default function InsideTheMindOfAHacker() {
         <TextDisplayV1
           title="What makes someone want to break into a system?"
           textBlocks={[
-            "No two hackers are the same. One hacker might be hacking because they are being paid to do so, while the other is like damn life is so boring lets make someone's life miserable.",
+            "No two hackers are the same. One hacker might be hacking because they are being paid to do so, while the other is like, damn life is so boring lets make someone's life miserable. (ง •_•)ง",
           ]}
           titleColor="text-glitch-pink"
         />
@@ -76,7 +77,7 @@ export default function InsideTheMindOfAHacker() {
           {hackerProfiles.map((hacker, idx) => (
             <button
               key={idx}
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-glitch-purple hover:bg-glitch-pink transition duration-300 transform hover:-translate-y-2 flex items-center justify-center border-2 border-white shadow-md overflow-hidden"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-glitch-purple hover:bg-glitch-pink transition duration-300 transform hover:-translate-y-2 flex items-center justify-center border-2 border-white shadow-md overflow-hidden hover:border-glitch-pink hover:border-4"
               onClick={() => setSelected(hacker)}
             >
               <img
@@ -125,10 +126,45 @@ export default function InsideTheMindOfAHacker() {
       <TextDisplayV1
           title="The Hacker's toolbox: Common Exploits"
           textBlocks={[
-            "CrossScripting",
+            "In this section, we will be covering only four of the techniques that hackers use to exploit vulnerabilities. They are the following:",
+            "<b>1. Buffer Overflow</b>",
+            "The core idea behind this technique is to write more data than the storage space allocated so that the hacker can inject malicious code into the program's memory.",
+            "This works because imagine the following scenario: You have 21 litres of juice. You need to fill a 10L glass with that juice. As you keep pouring, the juice will overflow and spill out, damaging the surrounding area. Similarly in buffer overflow, buffers are like the glass where they are fixed-size memory areas. if a program doesn't check your input size, you can overwrite return addresses, crash the program, or even run your own code.",
+            "This technique was used in early <i>WannaCry</i> ransomware",
+            "<b>2. SQL Injection</b>",
+            "Whenever an application interacts with a database, specifically SQL databases, it is vulnerable to SQL injection, especially if the application does not properly sanitize user inputs.",
+            "Think of SQLI as like a waiter who takes your written order and then goes to the kitchen for the chef to prepare your meal. If the chef is not careful and literally prepares what you wrote, the waiter will end up serving you something completely different.", 
+            "For example if you wrote:",
+            "1 medium rare steak; DROP TABLE menu",
+            "The chef will prepare the steak and then delete the entire menu.",
+            "In code, the waiter is the input field and the chef is the sanitization process. Essentially, SQLI injection is tricking the system to run extra commands by embedding them in the input field.",
+            "This technique was used in <i>Heartland Payment Systems</i> breach and OWASP TOP 10 still lists it",
+            "<b>3. Cross-Site Scripting (XSS)</b>",
+            "XSS lets attackers inject Javascript into webpages that are being viewed by other users. Similar to SQLI, if there is no sanitization, you are cooked. Attackers will most definitely be running their scripts on other user's browsers",
+            "A great analogy for this would be to imagine the Mona Lisa on public display. Then you let someone walk up to it and doodle on it. The person scribbles something like:",
+            "<script>alert('yo mama')</script>",
+            "Now, every visitor who looks at the Mona Lisa doesn’t just see art — they get hit with unsolicited jokes in JavaScript form. :(",
+            "Now if this were to happen on an actual web platform, attackers would be stealing session cookies, redirecting users, defacing the page and spreading worms. Much much more dangerous than yomama jokes unfortunately...",
+            "<b>4. Format String Vulnerability</b>",
+            "Mainly used to attack programs written in C, when user input is used as a format string, attackers can read or write arbitary memory.",
+            "Imagine you are at an event and the host hands the mic to a guest and says:",
+            "`Hey just tell us your name",
+            "But instead of the guest just introducing himself as `Carl`, the guest yells:",
+            "`My name is `Carl` and also... I WANT EVERYONE TO SHOW ME THEIR CREDIT CARD NUMBERS RIGHT NEOWW!",
+            "In this scenario, the vulnerability is the mic (printf() function in C language) as it just blindly echoes whatever the guest says including commands that should be FORBIDDEN (I like my money in my bank account. thanks. :)",
+            "In code this would look something like this:",
+            "%x %x %x %n",
+            "Now the system is leaking memory, writing values or crashing because it treated the user's input as a command."
           ]}
           titleColor="text-glitch-pink"
         />
+        <div className="flex justify-center">
+          <Link to="/hacks">
+            <button className="inline-flex items-center px-10 py-2 text-sm font-semibold text-black bg-neon-cyan border border-transparent rounded-lg shadow shadow-neon-cyan transition-all duration-200 hover:border-white hover:shadow-[0_0_20px_var(--tw-shadow-color)] hover:scale-105">
+              Start Hacking
+            </button>
+          </Link>
+        </div>
     </div>
   );
 }
