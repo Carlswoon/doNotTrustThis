@@ -22,6 +22,7 @@ export default function CommentSection() {
     setComments((prev) => [...prev, input]);
     setInput("");
     setCommentCount((prev) => prev + 1);
+    alert("damn it! you found me. well I guess this is where I applaud you now 👏🙄");
     return; // Don't trigger alerts
   }
   // Hints -> fibonacci sequence
