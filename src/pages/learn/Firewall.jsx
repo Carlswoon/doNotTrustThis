@@ -7,7 +7,7 @@ export default function Firewall() {
       <p className="text-lg text-gray-300 mb-10">
         A firewall is a security system (hardware or software) that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and untrusted external networks, such as the internet.
       </p>
-      <GoBackButton />
+      <GoBackButton/>
     </div>
   )
 }
