@@ -15,10 +15,10 @@ export default function HomePage() {
 
       {/* About Section */}
       <section className="py-16 px-4 sm:px-6 text-center bg-terminal-bg">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-glitch-purple">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-neon-cyan">
           About this Website
         </h2>
-        <p className="max-w-3xl mx-auto text-base sm:text-lg text-neon-cyan">
+        <p className="max-w-3xl mx-auto text-base sm:text-lg text-white">
           Welcome to a website that lies to you on purpose. Maybe? Who knows? This isn't your typical cybersecurity guide. It's an interactive hackable Capture The Flag (CTF) that will help you think like an attacker.
         </p>
       </section>

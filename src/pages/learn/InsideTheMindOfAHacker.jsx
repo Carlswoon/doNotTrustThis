@@ -69,6 +69,7 @@ export default function InsideTheMindOfAHacker() {
           title="What makes someone want to break into a system?"
           textBlocks={[
             "No two hackers are the same. One hacker might be hacking because they are being paid to do so, while the other is like, damn life is so boring lets make someone's life miserable. (ง •_•)ง",
+            "Let's delve deeper into why these hackers hack..."
           ]}
           titleColor="text-glitch-pink"
         />
