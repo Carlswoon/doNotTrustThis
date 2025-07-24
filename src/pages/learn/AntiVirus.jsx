@@ -1,4 +1,4 @@
-import GoBackButton from "../../components/GoBackButton";
+import GoBackButton from "../../components/goBackButton";
 export default function AntiVirus() {
   return (
     <div className="min-h-screen bg-terminal-bg text-white px-6 py-10">
