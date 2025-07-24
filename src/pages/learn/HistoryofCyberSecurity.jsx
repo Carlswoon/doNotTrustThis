@@ -21,7 +21,7 @@ const timelineData = [
   },
   {
     date: "1990's",
-    title: "RMGVIMVG YLLN, GSIVZ GLLN",
+    title: "RMGVIMVG YLLN, GSIVZ YLLN",
     description:
       "The 1990s marked the true boom of personal computing. More users were getting computers at home and in offices, and with them came new digital threats. Viruses like Jerusalem, Cascade, and Michelangelo started making headlines, pushing computer security into the spotlight. This was also the era when antivirus software became mainstream. Early tools like McAfee VirusScan and Norton Antivirus offered basic protection by scanning files for known virus signatures. \n At the same time, the web was rapidly evolving. The introduction of JavaScript brought interactivity to websites, but it also introduced new risks. Browser-based attacks, such as malicious pop-ups and cross-site scripting, began to emerge. \n In 1999, the Melissa virus caused widespread disruption. It was a macro-based malware that spread through Microsoft Word documents attached to emails. Once opened, it hijacked the user’s Outlook and sent itself to the first 50 contacts in their address book. The typical subject line read: \n ”Important Message from [username]” \n And the body text said: \n ”Here is the document you asked for. Don’t show anyone else.”\n This simple but effective use of social engineering resulted in over one million infections and an estimated $80 million in damages. Companies like Microsoft and Intel were forced to shut down their mail servers temporarily. The creator of this virus, David L. Smith, later claimed he named the virus after a stripper he met in Florida, a reminder that bad judgment mixed with code can have serious consequences.",
     secretMessage: "Atbash",
